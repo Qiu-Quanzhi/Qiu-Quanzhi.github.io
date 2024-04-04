@@ -22,7 +22,9 @@ jobs:
       - name: 页面初始化
         uses: actions/configure-pages@v5
       - name: 统一配置
-        run: curl -o 404.html https://www.qqzhi.cc/404.html
+        run: |
+          curl -o favicon.ico https://www.qqzhi.cc/favicon.ico
+          curl -o 404.html https://www.qqzhi.cc/404.html
       - name: 页面上传
         uses: actions/upload-pages-artifact@v3
         with:
